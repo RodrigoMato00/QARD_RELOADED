@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - QARD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&family=Hubballi&family=League+Gothic&family=Open+Sans:wght@700&family=Roboto+Serif:ital,wght@0,500;0,600;0,700;1,100&family=Rowdies:wght@300;400;700&display=swap');
+        </style>
+    <link rel="stylesheet" href="../static/css/main-home.css">
+    <link rel="shortcut icon" href="../static/css/img/LOGO QUARD 2.ico">
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <img src="../static/css/img/menu.png" width="50px" id="btn">
+      <img src="../static/css/img/error.png" width="50px" id="cancel">
+    </label>
+    <div class="sidebar">
+    <header>
+    </header>
+      <ul class="todos">
+            <li><a href="/register">Register</a></li>
+            <li><a href="{{url_for('logins.login')}}">QARD</a></li>
+            <li><a href="#">Contact</a></li>     
+      </ul>
+    </div>
+    <div id="bg"></div>
+    <section class="sec1">
+    
+    <div class="textar row m-0 vh-100 justify-content-center align-items-center">
+        <div class="divlogo" style="position: absolute; top: 50px">
+            <a href="/"><img src="../static/css/img/LOGO_QARD.png" class="logoqard"></a>
+        </div>
+        <div class="col-auto p-5">
+            <div>
+                <h1 class="h-01 ">One QARD<br>
+                                For Your<br>
+                                Life
+                </h1>
+            </div>
+            <div class="botonnn">
+                <a href="/AR_page"><button type="button" class="btn btn-success col-md-12" id="boton">AR</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- Javascripts -->
+        </div>
+    </section>
+    <!--<section class="sec4 row">
+        <div class="img_cont col-md-6" style="position: relative;">
+            <img src="../static/css/img/WEBIMG.png" class="img-fluid">
+        </div>
+        <div class="img_text col-md-6" style="position: relative;">
+            <div class="img-fluid">
+                <h1>Be part of the future</h1><br>
+                <p> We have a new AR business card tool! Our platform, simple, fast and easy to use, will allow companies to create and design their own business cards for their employees in real time and be able to view them at the moment.</p><br>
+                <h2>How ir works?</h2><br>
+                <h4><strong>1.</strong> Register your company</h4>
+                <p>Your company will have its own user to manage all the cards</p><br>
+                <h4><strong>2.</strong> Complete the data of your employees</h4>
+                <p>You can update the data of your employees whenever you want</p><br>
+                <h4><strong>3.</strong> Customize your card designs</h4>
+                <p>You will have the freedom to choose the design of the cards individually for each employee</p><br>
+                <h4><strong>4.</strong> Ready! A trigger will be automatically generated for each</h4><br>
+            </div>
+        </div>
+    </section>-->
+
+    <section class="sec5 container p-0">
+        <div class="row justify-content-center mb-3">
+            <div class="icon_p mt-4 col-md-6">
+                <div id="the_img" class="row justify-content-center">
+                    <img src="../static/css/img/WEBIMG.png" class="img-fluid">
+                </div>
+            </div>
+            <div class="icon_p mt-4 col-md-6">
+                <div class="row justify-content-center img-fluid">
+                    <h1>Be part of the future</h1><br>
+                    <p> We have a new AR business card tool! Our platform, simple, fast and easy to use, will allow companies to create and design their own business cards for their employees in real time and be able to view them at the moment.</p><br>
+                    <h2>How ir works?</h2><br>
+                    <h4><strong>1.</strong> Register your company</h4>
+                    <p>Your company will have its own user to manage all the cards</p><br>
+                    <h4><strong>2.</strong> Complete the data of your employees</h4>
+                    <p>You can update the data of your employees whenever you want</p><br>
+                    <h4><strong>3.</strong> Customize your card designs</h4>
+                    <p>You will have the freedom to choose the design of the cards individually for each employee</p><br>
+                    <h4><strong>4.</strong> Ready! A trigger will be automatically generated for each</h4><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec2 container p-3 mb-3">
+        <h2 class="h-04">Technology</h2>
+            <div class="row justify-content-center mt-4">
+                <div class="icon_p mt-4 col-md-4">
+                    <div class="row justify-content-center">
+                        <img src="../static/css/img/feathers_green.png">
+                        <div class="mt-4 p-4">
+                            <h3 style="color: gray;">Lightweight</h3>
+                            <p style="color: gray;">Our platform uses AR.Js, a lightweight yet powerful library capable of creating augmented reality for Mobile and Web with just a few lines of code.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon_p mt-4 col-md-4">
+                    <div class="row justify-content-center">
+                        <img style="width: 120px;" src="../static/css/img/webapp.png">
+                        <div class="mt-4 p-4">
+                            <h3 style="color: gray;">Web App</h3>
+                            <p style="color: gray;">There is no need to download any apps for use, making it instantly scalable and upgradable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon_p mt-4 col-md-4">
+                    <div class="row justify-content-center">
+                        <img src="../static/css/img/mold.png">
+                        <div class="mt-4 p-4">
+                            <h3 style="color: gray;">Customizable</h3>
+                            <p style="color: gray;">You will be able to design and personalize each card yourself and it will be created <strong>on the spot.</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon_p mt-4 col-md-4">
+                    <div class="row justify-content-center">
+                        <img src="../static/css/img/fast.png">
+                        <div class="mt-4 p-4">
+                            <h3 style="color: gray;">Fast</h3>
+                            <p style="color: gray;">Our A-Frame + AR.Js augmented reality engine works with the DOM, but its elements do not touch the browser's layout engine.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon_p mt-4 col-md-4">
+                    <div class="row justify-content-center">
+                        <img style="width: 250px;" src="../static/css/img/multiplatform.png">
+                        <div class="mt-4 p-4">
+                            <h3 style="color: gray;">Multi Platform</h3>
+                            <p style="color: gray;">The web app is compatible with all types of devices and any operating system. It can be viewed from a smartphone to a PC.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon_p mt-4 col-md-4">
+                    <div class="row justify-content-center">
+                        <img src="../static/css/img/world.png">
+                        <div class="mt-4 p-4">
+                            <h3 style="color: gray;">Green Responsability</h3>
+                            <p style="color: gray;">Thanks to the fact that the information on the cards is updatable, this means that the card does not have to be reprinted for each change that you want to display.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <section class="sec3 mt-3 p-3" id="sec3">
+        <h2 class="h-04 p-3">Our Team</h2>
+        <div class="contenedor p-0">
+            <div class="content">
+                <div class="contenido">
+                <div class="imgBx">
+                    <img src="../static/css/img/franco.jpg">
+                </div>
+                <div class="contentbox">
+                    <h4>Franco Bueno</h4>
+                    <h5>Frontend Developer</h5>
+                </div>
+                <div class="sci">
+                    <a href="https://www.instagram.com/fraaan_017/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/FrancoBuenoHolberton"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/franco-bueno-794335215/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+            <div class="content">
+                <div class="contenido">
+                <div class="imgBx">
+                    <img src="../static/css/img/jp.jpg">
+                </div>
+                <div class="contentbox">
+                    <h4>Juan Draper</h4>
+                    <h5>Backend Developer</h5>
+                </div>
+                <div class="sci">
+                    <a href="https://www.instagram.com/juanpablotumadre/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/JuanDraper"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jpdrapercau/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+            <div class="content">
+                <div class="contenido">
+                <div class="imgBx">
+                    <img src="../static/css/img/marce.jpg">
+                </div>
+                <div class="contentbox">
+                    <h4>Marcelo Arbiza</h4>
+                    <h5>Project Manager</h5>
+                </div>
+                <div class="sci">
+                    <a href="https://www.instagram.com/barra_32"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Marceloarbiza"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/marceloarbiza/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+            <div class="content">
+                <div class="contenido">
+                <div class="imgBx">
+                    <img src="../static/css/img/rodri.jpg">
+                </div>
+                <div class="contentbox">
+                    <h4>Rodrigo Mato</h4>
+                    <h5>AR Specialist</h5>
+                </div>
+                <div class="sci">
+                    <a href="https://www.instagram.com/rodrigomfg/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/RodrigoMato00"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rodrigo-mato-pla/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="sec5 container p-0">
+        <h2 class="h-04">Contact Us</h2>
+        <div class="row justify-content-center mb-3">
+            <div class="icon_p mt-4 col-md-12">
+                <div class="row justify-content-center img-fluid" style="text-align: center;">
+                    <h4>contact@qard.com</h4><br>
+                    <h4>+598 99 71 21 98</h4><br>
+                </div>
+            </div>
+        </div>
+    </section>
+        <footer>QARD STUDIO INC - All Rights reserved ®</footer>
+        <script src="../static/js/particles.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<input type="checkbox" id="check">
+<label for="check">
+  <img src="../static/css/img/menu.png" width="50px" id="btn">
+  <img src="../static/css/img/error.png" width="50px" id="cancel">
+</label>
+<div class="sidebar">
+<header>
+</header>
+  <ul class="todos">
+        <li><a href="/register">Register</a></li>
+        <li><a href="{{url_for('logins.login')}}">QARD</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="{{url_for('logins.logout')}}" class="nav-link text-grey">Logout</a></li>   
+  </ul>
+</div>

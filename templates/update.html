@@ -1,0 +1,154 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="row crud_bar">
+<div class="divlogo col-md-12 mb-3">
+    <a href="/"><img src="../static/css/img/LOGO_QARD.png" class="logoqard"></a>
+</div>
+<form action="/update/{{contact.id}}" id="usrform" method="POST" class="card bg-white-grey text-grey col-md-8">
+    <div class="card-body p-4 row" id="card-inputs">
+        <div class="prev-cont mb-3 col-md-6">
+            <canvas id="preview" style="width:240px; border-radius: 50%;"></canvas>
+        </div>
+        <div class="cont4 col-md-6">
+            <div class="mb-3">
+                <label for="fullname">Name and surname</label>
+                <input type="text" name="fullname" placeholder="" value="{{contact.fullname}}" class="form-control rounded-0 bg-white border-0">
+            </div>
+            <div class="mb-3">
+                <label for="user_position">Position</label>
+                <input type="text" name="user_position" placeholder="" value="{{contact.user_position}}" class="form-control rounded-0 bg-white border-0">
+            </div>
+            <div class="mb-3">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="" value="{{contact.email}}" class="form-control rounded-0 bg-white border-0">
+            </div>
+            <div class="mb-3">
+                <label for="phone">Phone number (Ex: 099123456)</label>
+                <input type="tel" name="phone" pattern="[0-9]{9}" placeholder="" value="{{contact.phone}}" class="form-control rounded-0 bg-white border-0">
+            </div>
+        </div>
+        <div class="cont-social1 col-md-12">
+            <div class="mb-3">
+                <label for="web_page">Web</label>
+                <input type="url" name="web_page" placeholder="" value="{{contact.web_page}}" class="form-control rounded-0 bg-white border-0">
+            </div>
+            <div class="mb-3">
+                <label for="linkedin">LinkedIn</label>
+                <input type="url" name="linkedin" placeholder="" value="{{contact.linkedin}}" class="form-control rounded-0 bg-white border-0">
+            </div>
+        </div>
+        <label for="social-net" style="font-weight: bold;">You can choose only 2 social networks</label>
+        <div class="mb-3  col-md-6">
+            <label for="github">GitHub</label>
+            <input type="url" id="gh" name="github" placeholder="" value="{{contact.github}}" class="form-control rounded-0 bg-white border-0" onchange="activartodo();">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="instagram">Instagram</label>
+            <input type="url" id="in" name="instagram" placeholder="" value="{{contact.instagram}}" class="form-control rounded-0 bg-white border-0" onchange="activartodo();">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="facebook">Facebook</label>
+            <input type="url" id="fb" name="facebook" placeholder="" value="{{contact.facebook}}" class="form-control rounded-0 bg-white border-0" onchange="activartodo();">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="twitter">Twitter</label>
+            <input type="url" id="tw" name="twitter" placeholder="" value="{{contact.twitter}}" class="form-control rounded-0 bg-white border-0" onchange="activartodo();">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="behance">Behance</label>
+            <input type="url" id="bh" name="behance" placeholder="" value="{{contact.behance}}" class="form-control rounded-0 bg-white border-0" onchange="activartodo();">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="slack">Slack</label>
+            <input type="url" id="sk" name="slack" placeholder="" value="{{contact.slack}}" class="form-control rounded-0 bg-white border-0" onchange="activartodo();">
+        </div>
+        <div class="mb-3">
+            <label for="about_you">About you</label>
+            <textarea class="txtarea col-md-12" name="about_you" id="usrform" cols="30" rows="4" placeholder="Write about you">{{contact.about_you}}</textarea>
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="button_color">Button Color</label>
+            <input type="text" id="b_color" name="button_color" placeholder="" value="{{contact.button_color}}" class="form-control rounded-0 bg-white border-0">
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="icon_color">Icon Color</label>
+            <input type="text" id="i_color" name="icon_color" placeholder="" value="{{contact.icon_color}}" class="form-control rounded-0 bg-white border-0">
+        </div>
+        <button class="btn btn-warning" onclick='myfunction()'>
+            Update
+        </button>
+    </div>
+</form>
+<div class="col-md-4">
+<div id="picker-container">
+    <div class="row mt-1">
+        <div id="button_style_qard" class="col-sm-4">
+            <div class="color-picker"></div>
+            <div id="color-indicator" class="color-indicator" style="text-align: center;">
+                <i id="fa_gh" class="fa-brands fa-github"></i>
+            </div>
+        </div>
+        <div class="card-color col-sm-8 mb-0">
+            <ul>
+                <li class="color-item" id="fa-white"></li>
+                <li class="color-item" id="fa-black"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="color-picker" class="mb-3"></div>
+    <div>
+        <h3 id="color-indicator-text" style="text-align: center; color: #D3D0DB; font-size: medium; visibility: hidden;"></h3>
+    </div>
+</div>
+<div class="img-container">
+    <!-- Input file where the image is attached -->
+    <label class="custom-file-upload fas fa-camera">
+        <input type="file" id="image">
+        <p>Choose a photo for your profile</p>
+    </label>
+    <!-- Editor where the image will be cropped with the help of croppr.js -->
+    <div id="editor"></div>
+    <!-- Image sample cropped in Base64 -->
+    <code id="base64" style="display: none;"></code><br>
+</div>
+</div>
+</div>
+<script>
+    function getSelectValue() {
+        var x = document.getElementById("sele").value;
+        return x;
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+<script>
+    let colorIndicator = document.getElementById('color-indicator');
+    const colorPicker = new iro.ColorPicker("#color-picker", {});
+    colorPicker.on('color:change', function(color) {
+        colorIndicator.style.backgroundColor = color.hexString;
+        document.getElementById('color-indicator-text').innerHTML = color.hexString;
+        document.getElementById('b_color').value = color.hexString;
+    });
+</script>
+<script>
+    window.addEventListener('load', () => {
+        const colorItems = document.querySelectorAll('.color-item');
+        const gh_icon = document.getElementById('fa_gh');
+        colorItems.forEach(colorItem => {
+            colorItem.addEventListener('click', function() {
+                const idSelected = this.id;
+                console.log(idSelected);
+                if (idSelected == 'fa-white') {
+                    gh_icon.classList.remove('fa-black');
+                    gh_icon.classList.add('fa-white');
+                    document.getElementById('i_color').value = '#FFFFFF';
+                } else {
+                    gh_icon.classList.remove('fa-white');
+                    gh_icon.classList.add('fa-black');
+                    document.getElementById('i_color').value = '#000000';
+                }
+            });
+        });
+    })
+</script>
+{% endblock %}
