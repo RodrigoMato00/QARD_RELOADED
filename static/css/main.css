@@ -1,0 +1,81 @@
+body{
+    background: white;
+}
+
+.bg-black{
+    background: #090909;
+}
+
+#preview{
+    background-image: url("https://www.tenforums.com/geek/gars/images/2/types/thumb_14400082930User.png");
+    border: 1px;
+    height: 240px;
+}
+
+.bg-grey{
+    background: #646464;
+}
+
+.bg-white-grey{
+    background: #f2f2f2;
+    border-style: none;
+}
+
+.text-grey{
+    color: #c2c2c2;
+}
+
+.btn-warning{
+    height: 40px;
+}
+
+.txtarea{
+    border-style: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: white;
+    background-color: #646464;
+    height: 28px;
+}
+
+.custom-file-upload p{
+    font-family: 'Lucida Sans Regular';
+    float: right;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.prev-cont{
+    text-align: center;
+    margin: auto;
+    padding: inherit
+}
+
+input[type="url"]:disabled {
+    background: black;
+}
+
+#pruebaimagen{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+.divlogo{
+    height: 100px;
+    margin-top: 15px;
+}
+.logoqard{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

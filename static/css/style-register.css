@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url('fondo.jpg');
+  }
+  
+  .form-register {
+    width: 600px;
+    height: 550px;
+    background-image: linear-gradient(180deg, #fbfdff 80%, #ffffffbd 100%);padding: 30px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 4px;
+    /*font-family: 'calibri';*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif serif;
+    color: rgb(0, 0, 0);
+  }
+
+  .form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    width: 100%;
+    background: #bebebe;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    /*font-family: 'calibri';*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif serif;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
+  .form-register a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .form-register a:hover {
+    color: rgb(51, 170, 91);
+    text-decoration: underline;
+  }
+  
+  .form-register .botons {
+    width: 100%;
+    background: #32A685;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    border: 1px black solid;
+    font-size: 16px;
+  }
+  .form-register .botons:hover{
+    background-color: #37555a;
+  }
+ /* NEW */
+ .sidebar{
+  position: fixed;
+  left: -250%;
+  width: 250px;
+  height: 100%;
+  background: rgba(87, 83, 83);
+  transition: all .5s ease;
+  margin-top: -70px;
+  z-index: 9;
+  border-right: 0px solid black;
+}
+.sidebar header{
+  font-size: 22px;
+  color: Black;
+  text-align: center;
+  line-height: 70px;
+  padding-top: 50px;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255,255,255);
+  border-bottom: 1px solid #fafafa;
+  transition: .4s;
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif serif;*/
+}
+
+.sidebar ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a img{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn, label #cancel{
+  position: fixed;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+label #btn{
+  left: 20px;
+  top: 10px;
+  font-size: 35px;
+  background-color: transparent;
+  padding: 6px 12px;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 10px;
+  font-size: 30px;
+  background-color: transparent;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+.iconito{
+  background: #ffffff;
+  border-radius: 60%;
+}
+.sidebar header img{
+  width: 200px;
+  height: 100%;
+  align-items: center;
+}
+
+.todos{
+  padding-top: 50%;
+}
+.bajo{
+    padding-top: 50px;
+}
+.imagensita{
+    margin-top: 50px;
+    height: 100px;
+    width: 250px;
+}
+.logo{
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: -10px;
+  width: 200px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width:1000px){
+  .form-register{
+      width: 390px;
+  }
+  .logo{
+    margin-left: 70px;
+  }
+  .form-register p{
+    height: 70px;
+  }
+}
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../img/loader.gif') 50% 50% no-repeat  rgb(248, 248, 248);
+  opacity: .8;
+}
+
+.divlogo{
+  height: 100px;
+}
+.logoqard{
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
