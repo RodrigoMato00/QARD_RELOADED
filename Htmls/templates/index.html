@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<input type="checkbox" id="check">
+<label for="check">
+  <img src="../static/css/img/menu.png" width="50px" id="btn">
+  <img src="../static/css/img/error.png" width="50px" id="cancel">
+</label>
+<div class="sidebar">
+<header>
+</header>
+  <ul class="todos">
+      <li><a href="/"><img src="../static/css/img/acceso.png" width="30px" class="iconito">Home</a></li>
+      <li><a href="/"><img src="../static/css/img/atencion-al-cliente.png" width="30px" class="iconito">Contact</a></li>
+      <li><a href="/#sec3"><img src="../static/css/img/team.png" width="30px" class="iconito">QARD - Team </a></li>
+      <li><a href="/register"><img src="../static/css/img/verificar.png" width="30px" class="iconito">Register</a></li>
+      <li><a href="https://github.com/FrancoBuenoHolberton/indexv2"><img src="../static/css/img/silueta-del-logo-de-github-en-un-cuadrado.png" width="30px" class="iconito">Github-Team</a></li>
+  </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-12 mb-3">
+        {% include 'partials/_message.html' %}
+        {% include 'partials/_contactform.html' %}
+    </div>
+    <div class="col-md-12">
+            {% for contact in contacts %}
+                <div class="card bg-white-grey text-dark mb-3">
+                    <!--<h1>{{ 'user_photos/photo-' + contact.id + '.png' }}</h1>
+                    <img src="../user_photos/photo- + {{ contact.id }} + .png" alt="PHOTO">
+                    <img src="../user_photos/photo-3d063e53-8d66-4fb1-bdad-d199b8377049.png">-->
+                    <div class="card-body">
+                        <!--<div id="pruebaimagen">
+                        </div>
+                        <h1>{{ 'user_photos/photo-' + contact.id + '.png' }}</h1>-->
+                        <div class="d-flex justify-content-between">
+                            <h5>
+                                {{ contact.fullname }}
+                            </h5>
+                            <div>
+                                <a href="{{ url_for('contacts.update_contact', id=contact.id) }}" class="btn bg-warning text-white btn-sm rounded-3">Update</a> 
+                                <a href="{{ url_for('contacts.delete_contact', id=contact.id) }}" class="btn btn-danger btn-sm rounded-3">Delete</a>
+                            </div>
+                        </div>
+                        <p>
+                            {{ contact.email }}
+                        </p>
+                        <p class="mb-0">
+                            {{ contact.phone }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+
+
+
+
+    
+{% endblock %}

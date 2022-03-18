@@ -1,0 +1,20 @@
+<form action="/new" method="POST" class="card bg-white-grey text-grey">
+    <div class="card-body p-4">
+        <div class="mb-3">
+            <label for="fullname">Name and surname</label>
+            <input type="text" name="fullname" placeholder="Write the fullname" class="form-control rounded-0 bg-white border-0">
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Write the email" class="form-control rounded-0 bg-white border-0">
+        </div>
+
+        <div class="mb-3"></div>
+            <label for="email">Phone number (Ex: 099123456)</label>
+            <input type="tel" name="phone" pattern="[0-9]{9}" placeholder="Write the phone" class="form-control rounded-0 bg-white border-0">
+        </div>
+        <button class="mb-3 mx-3 btn btn-success text-light">
+            Save
+        </button>
+    </div>
+</form>
